@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.OperationDao" >
+
+
+
+
+<!-- 商品的列表查询
+parameterType包装了查询条件
+resultType使用扩展对象
+-->
+<select id="queryOperationList" 
+resultType="po.OperationCustom">
+SELECT operation_id,time_start,time_finish,patient_id,operatingroom_id,doctor_id,anesthetist_id,nurseNum,status FROM doctor
+</select>
+
+
+<!-- <select id="findDoctorById" parameterType="String" 
+resultType="po.DoctorCustom">
+SELECT id,password,name,gender,age FROM doctor where id = #{id, jdbcType=VARCHAR}
+</select>
+
+<update id="updateDoctorById" parameterType="po.DoctorCustom">
+    UPDATE doctor SET
+    id = #{id},
+    password = #{password},
+    name = #{name},
+    gender = #{gender},
+    age = #{age}
+    WHERE
+    id = #{id}
+ </update> -->
+
+
+</mapper>

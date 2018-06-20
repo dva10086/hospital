@@ -11,7 +11,7 @@ resultType使用扩展对象
 -->
 <select id="queryOperationList" 
 resultType="po.OperationCustom">
-SELECT operation_id,time_start,time_finish,patient_id,operatingroom_id,doctor_id,anesthetist_id,nurseNum,status FROM doctor
+SELECT operation_id,time_start,time_finish,patient_id,operatingroom_id,doctor_id,anesthetist_id,nurseNum,status FROM operation
 </select>
 
 

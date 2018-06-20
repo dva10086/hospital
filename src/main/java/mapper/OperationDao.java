@@ -2,7 +2,7 @@ package mapper;
 
 import java.util.List;
 
-import po.DoctorCustom;
+import po.OperationCustom;
 
 public interface OperationDao {
 	

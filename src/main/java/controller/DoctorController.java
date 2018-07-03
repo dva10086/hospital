@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import po.DoctorCustom;
+import po.PatientCustom;
 import service.DoctorService;
+import service.PatientService;
 
 @Controller
 @RequestMapping("/doctor")
@@ -21,8 +23,10 @@ public class DoctorController {
 
 	@Autowired
 	public DoctorService doctorService;
+	@Autowired
+	public PatientService patientService;
 	
-	//账户查询
+	/*//账户查询
 	@RequestMapping("/queryDoctor.action")
 	public ModelAndView queryDoctor() throws Exception {
 		
@@ -54,6 +58,21 @@ public class DoctorController {
 		doctorService.updateDoctorById(id, doctorCustom);
 			
 		return "forward:queryDoctor.action";
+		
+		
+	}*/
+	
+	
+	@RequestMapping("/queryPatient.action")
+	public ModelAndView queryPatient() throws Exception{
+		
+		List<PatientCustom> patientList = patientService.queryPatientList();
+		ModelAndView modelandview = new ModelAndView();
+		modelandview.addObject("patientList",patientList);
+		
+		modelandview.setViewName("index");
+		
+		return modelandview;
 		
 		
 	}

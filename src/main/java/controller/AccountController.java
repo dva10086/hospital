@@ -18,7 +18,7 @@ import service.AccountService;
 import service.impl.AccountServiceImpl;
 
 @Controller
-@RequestMapping("/account")
+@RequestMapping("/jsp")
 public class AccountController {
 
 	@Autowired

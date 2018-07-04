@@ -14,6 +14,34 @@ resultType="po.OperationCustom">
 SELECT operation_id,time_start,time_finish,patient_id,operatingroom_id,doctor_id,anesthetist_id,nurseNum,status FROM operation
 </select>
 
+<insert id="addOperation" parameterType="po.OperationCustom" useGeneratedKeys="false">
+    INSERT INTO operation
+    ( 
+    operation_id,
+    time_start,
+    time_finish,
+    patient_id,
+    operatingroom_id,
+    doctor_id,
+    nurseNum,
+    status,
+    anesthetist_id,
+    date
+    )
+    VALUES
+    ( 
+    #{operation_id},
+    #{time_start},
+    #{time_finish},
+    #{patient_id},
+    #{operatingroom_id},
+    #{doctor_id},
+    #{nurseNum},
+    #{status},
+    #{anesthetist_id},
+    #{date}
+    )
+</insert>
 
 <!-- <select id="findDoctorById" parameterType="String" 
 resultType="po.DoctorCustom">

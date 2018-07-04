@@ -15,13 +15,13 @@
     <td>年龄</td>
 </tr>
 
-<c:forEach items="${doctorList}" var = "doctor">
+<c:forEach items="${patientList}" var = "patient">
 <tr>
-    <td>${doctor.id }</td>
-    <td>${doctor.password }</td>
-    <td>${doctor.name}</td>
-    <td>${doctor.gender}</td>
-    <td>${doctor.age}</td>
+    <td>${patient.id }</td>
+    <td>${patient.password }</td>
+    <td>${patient.name}</td>
+    <td>${patient.gender}</td>
+    <td>${patient.age}</td>
     <td><a href="${pageContext.request.contextPath }/doctor/editDoctor.action?id=${doctor.id}">修改</a></td>
 </tr>
 </c:forEach> 

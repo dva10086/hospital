@@ -24,4 +24,5 @@ xmlns:tx="http://www.springframework.org/schema/tx"
 <bean id="accountService" class="service.impl.AccountServiceImpl" />
 <bean id="doctorService" class="service.impl.DoctorServiceImpl" />
 <bean id="patientService" class="service.impl.PatientServiceImpl" />
+<bean id="operationService" class="service.impl.OperationServiceImpl" />
 </beans>

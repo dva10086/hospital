@@ -20,4 +20,10 @@ public class OperationServiceImpl implements OperationService{
 		return operationDao.queryOperationList();
 	}
 
+	public void addOperation(OperationCustom operationCustom) throws Exception {
+		// TODO Auto-generated method stub
+		operationDao.addOperation(operationCustom);
+		
+	}
+
 }

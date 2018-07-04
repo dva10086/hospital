@@ -5,7 +5,7 @@ public class Patient {
 	private String id;
 	private String password;
 	private String name;
-	private int gender;
+	private String gender;
 	private int age;
 	public String getId() {
 		return id;
@@ -25,10 +25,10 @@ public class Patient {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public void setGender(int gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 	public int getAge() {

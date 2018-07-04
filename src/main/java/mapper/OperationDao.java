@@ -7,4 +7,6 @@ import po.OperationCustom;
 public interface OperationDao {
 	
 	public List<OperationCustom> queryOperationList()throws Exception;
+	
+	public void addOperation(OperationCustom operationCustom)throws Exception;
 }
